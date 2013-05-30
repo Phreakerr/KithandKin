@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<html lang="en">
+<xhtml:lang="en">
 <title>Kith & Kin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/layout.css" rel="stylesheet" media="screen">
@@ -34,6 +36,10 @@
 </head>
 <body>
 	<!-- Header  -->
+    <!--allows user to jump to main content-->
+    <p><a href="#content"><img src="spacer.gif" width="0" height="0" border="0" alt="skip to content" /></a></p>
+    
+    <map title="Navigation Bar" id="navbar">
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="navbar-inner" role="inner_navigation">
 			<div class="container" role="navigation_items">
@@ -55,9 +61,11 @@
 			</div>
 		</div>
 	</div>
+    </map>
 	<!-- end Header -->
 	<!-- Content -->
 	<div class="container top-margin" role="content_container">
+    <a name="content"></a>
 		<form class="form-horizontal span6 offset3" method="post" action="home.html" role="login_form" id="login_form">
 				<legend class="text-center">Login</legend>
 				<div class="control-group">

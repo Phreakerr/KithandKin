@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<html lang="en"> 
+<xhtml:lang = "en">
 <head>
 <title>Kith & Kin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,6 +48,11 @@ function intersection(a,d,b,c,e,f){var g;c-=a;g=e-d;e=Math.sqrt(g*g+c*c);if(e>b+
 </head>
 <body>
 	<!-- Header  -->
+    
+    <!--allows user to jump to main content-->
+    <p><a href="#content"><img src="spacer.gif" width="0" height="0" border="0" alt="skip to content" /></a></p>
+    
+    <map title="Navigation Bar" id="navbar">
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="navbar-inner" role="inner_navigation">
 			<div class="container" role="navigation_items">
@@ -54,39 +61,40 @@ function intersection(a,d,b,c,e,f){var g;c-=a;g=e-d;e=Math.sqrt(g*g+c*c);if(e>b+
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="brand" href="index.html"><img src="./img/LOGO2.png" class="logo"> Kith & Kin</a>
+				<a class="brand" href="index.html"><img src="./img/LOGO2.png" class="logo" alt="Logo"> Kith & Kin</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li class="active"><a href="home.html"><i class="icon-user icon-white"></i> MY PROFILE</a></li>
-						<li><a href="searchContacts.html"><i class="icon-search icon-white"></i> SEARCH CONTACTS</a></li>
-						<li><a href="search.html"><i class="icon-plus-sign icon-white"></i> ADD NEW CONTACT</a></li>
-						<li><a href="faq.html"><i class="icon-question-sign icon-white"></i> FAQ</a></li>
+						<li class="active"><a href="home.html" alt="Home"><em class="icon-user icon-white"></em> MY PROFILE</a></li>
+						<li><a href="searchContacts.html" alt="Search Contacts"><em class="icon-search icon-white"></em> SEARCH CONTACTS</a></li>
+						<li><a href="search.html" alt="Add New Contact"><em class="icon-plus-sign icon-white"></em> ADD NEW CONTACT</a></li>
+						<li><a href="faq.html" alt"Frequency Asked questions"><em class="icon-question-sign icon-white"></em> FAQ</a></li>
 					</ul>
 				</div>
 				<div class="btn-group  pull-right">
-					<a class="btn btn-info" href="#"><i class="icon-user icon-white"></i> Yolina</a> 
+					<a class="btn btn-info" href="#"><em class="icon-user icon-white"></em> Yolina</a> 
 					<a class="btn btn-info dropdown-toggle" data-toggle="dropdown"
 						href="#"><span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="profile.html"><i class="icon-pencil"></i> Edit</a></li>
-						<li><a href="home.html"><i class="icon-book"></i> Albums</a></li>
-						<li><a href="addPicture.html"><i class="icon-picture"></i> Add Picture</a></li>
-						<li><a href="searchContacts.html"><i class="icon-search"></i> Search Contacts</a></li>
-						<li><a href="search.html"><i class="icon-plus-sign"></i> Add Contact</a></li>
+						<li><a href="profile.html" alt="Edit Profile"><em class="icon-pencil"></em> Edit</a></li>
+						<li><a href="home.html" alt="Albums"><em class="icon-book"></em> Albums</a></li>
+						<li><a href="addPicture.html" alt="Add Pictures"><em class="icon-picture"></em> Add Picture</a></li>
+						<li><a href="searchContacts.html" alt="Search Contacts"><em class="icon-search"></em> Search Contacts</a></li>
+						<li><a href="search.html" alt="Add Contacts"><em class="icon-plus-sign"></em> Add Contact</a></li>
 						<li class="divider"></li>
-						<li><a href="#"><i class="icon-off"></i> Logout</a></li>
+						<li><a href="#"><em class="icon-off"></em> Logout</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
 			</div>
 		</div>
 	</div>
+    </map>
 	<!-- end Header -->
 	<!-- Content -->
 	<div class="container" role="content_container">
 			<div class="span2">
 			<div class="sidebar-nav affix span2">
-				<img src="./img/accountPic.png" id="img" class="img-polaroid">
+				<img src="./img/accountPic.png" id="img" class="img-polaroid" alt="Profile Picture">
 
 				<ul class="nav">
 						<li><br></li>
@@ -99,7 +107,7 @@ function intersection(a,d,b,c,e,f){var g;c-=a;g=e-d;e=Math.sqrt(g*g+c*c);if(e>b+
 			<!--/.well -->
 		</div>
 		<div id="holder" role="main_content">
-		
+		<a name="content"></a>
 		</div>
 	</div>
 

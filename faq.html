@@ -33,7 +33,7 @@
 					</ul>
 				</div>
 				<div class="btn-group  pull-right">
-					<a class="btn btn-info" href="#"><i class="icon-user icon-white"></i> Yolina</a> 
+					<a class="btn btn-info" href="home.html"><em class="icon-user icon-white"></em> Yolina</a> 
 					<a class="btn btn-info dropdown-toggle" data-toggle="dropdown"
 						href="#"><span class="caret"></span></a>
 					<ul class="dropdown-menu">
@@ -43,7 +43,7 @@
 						<li><a href="searchContacts.html"><em class="icon-search"></em> Search Contacts</a></li>
 						<li><a href="search.html"><em class="icon-plus-sign"></em> Add Contact</a></li>
 						<li class="divider"></li>
-						<li><a href="#"><em class="icon-off"></em> Logout</a></li>
+						<li><a href="login.html"><em class="icon-off"></em> Logout</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
@@ -52,10 +52,11 @@
 	</div>
 	<!-- end Header -->
 	<!-- Content -->
-	<div class="container" role="content_container">
-		<div class="span2" role="profile_pane">
-			<div class="sidebar-nav affix span2">
-				<img src="./img/accountPic.png" class="img-polaroid" alt="Profile picture">
+	<div class="container top-margin" role="content_container">
+		<map title="Profile Bar" id="profileBar">
+        <div class="span2 profile" role="profile_pane">
+			<div class="sidebar-nav span2">
+				<img src="./img/accountPic.png" class="img-polaroid" alt="Profile Picture">
 				<ul class="nav">
 						<li><br></li>
 						<li><strong>Yolina Kostova</strong></li>
@@ -72,7 +73,12 @@
 				</div>
 			</div>
 			<!--/.well -->
+			<span class="clear-sides"><br/></span>
 		</div>
+        </map>
+
+		<map title="FAQ" id="faq">
+		<a name="content"></a>
 		<div class="span9 top-margin" role="main_content">
 				<div class="span8">
 					<form class="input span7 pull-right" method="post" action="#" role="frequently_asked_questions">
@@ -141,6 +147,7 @@
 				</div>
 		</div>
 	</div>
+	</map>
 	<!-- end Content-->
 	<!-- JS Files -->
 	<script src="http://code.jquery.com/jquery.js"></script>

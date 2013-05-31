@@ -50,7 +50,7 @@ function intersection(a,d,b,c,e,f){var g;c-=a;g=e-d;e=Math.sqrt(g*g+c*c);if(e>b+
 	<!-- Header  -->
     
     <!--allows user to jump to main content-->
-    <p><a href="#content"><img src="spacer.gif" width="0" height="0" border="0" alt="skip to content" /></a></p>
+    <p><a href="#content">skip to content</a></p>
     
     <map title="Navigation Bar" id="navbar">
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -71,17 +71,17 @@ function intersection(a,d,b,c,e,f){var g;c-=a;g=e-d;e=Math.sqrt(g*g+c*c);if(e>b+
 					</ul>
 				</div>
 				<div class="btn-group  pull-right">
-					<a class="btn btn-info" href="#"><em class="icon-user icon-white"></em> Yolina</a> 
+					<a class="btn btn-info" href="home.html"><i class="icon-user icon-white"></i> Yolina</a> 
 					<a class="btn btn-info dropdown-toggle" data-toggle="dropdown"
 						href="#"><span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="profile.html" alt="Edit Profile"><em class="icon-pencil"></em> Edit</a></li>
-						<li><a href="home.html" alt="Albums"><em class="icon-book"></em> Albums</a></li>
-						<li><a href="addPicture.html" alt="Add Pictures"><em class="icon-picture"></em> Add Picture</a></li>
-						<li><a href="searchContacts.html" alt="Search Contacts"><em class="icon-search"></em> Search Contacts</a></li>
-						<li><a href="search.html" alt="Add Contacts"><em class="icon-plus-sign"></em> Add Contact</a></li>
+						<li><a href="profile.html"><i class="icon-pencil"></i> Edit</a></li>
+						<li><a href="home.html"><i class="icon-book"></i> Albums</a></li>
+						<li><a href="addPicture.html"><i class="icon-picture"></i> Add Picture</a></li>
+						<li><a href="searchContacts.html"><i class="icon-search"></i> Search Contacts</a></li>
+						<li><a href="search.html"><i class="icon-plus-sign"></i> Add Contact</a></li>
 						<li class="divider"></li>
-						<li><a href="#"><em class="icon-off"></em> Logout</a></li>
+						<li><a href="login.html"><i class="icon-off"></i> Logout</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
@@ -92,6 +92,7 @@ function intersection(a,d,b,c,e,f){var g;c-=a;g=e-d;e=Math.sqrt(g*g+c*c);if(e>b+
 	<!-- end Header -->
 	<!-- Content -->
 	<div class="container" role="content_container">
+		<map title="Profile Bar" id="profileBar">
 			<div class="span2">
 			<div class="sidebar-nav affix span2">
 				<img src="./img/accountPic.png" id="img" class="img-polaroid" alt="Profile Picture">
@@ -105,9 +106,13 @@ function intersection(a,d,b,c,e,f){var g;c-=a;g=e-d;e=Math.sqrt(g*g+c*c);if(e>b+
 				</ul>
 			</div>
 			<!--/.well -->
+			<span class="clear-sides"><br/></span>
 		</div>
-		<div id="holder" role="main_content">
+        </map>
+        
+
 		<a name="content"></a>
+		<div id="holder" role="main_content">
 		</div>
 	</div>
 

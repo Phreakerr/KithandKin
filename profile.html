@@ -36,8 +36,9 @@
 </head>
 <body>
 	<!-- Header  -->
-    <!--allows user to jump to main content-->
-    <p><a href="#content">skip to content</a></p>
+    
+	<!--skip to content link only 'visible' to screen reader-->
+	<p><a href="#content" style="font-size:-2; color:#FFF;">Select to skip to the main content</a></p>
     
     <map title="Navigation Bar" id="navbar">
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -79,7 +80,7 @@
 	<!-- end Header -->
 	<!-- Content -->
 	<div class="container top-margin" role="content_container">
-    <a name="content"></a>
+    <a name="content" id="content"></a>
 		<div class="tabbable span7 offset3" role="tabbable_content">
 			<!-- Only required for left/right tabs -->
 				<ul class="nav nav-tabs" role="navigation_tabs">

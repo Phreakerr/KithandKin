@@ -16,8 +16,9 @@
 </head>
 <body>
 	<!-- Header  -->
-    <!--allows user to jump to main content-->
-    <p><a href="#content">skip to content</a></p>
+    
+	<!--skip to content link only 'visible' to screen reader-->
+	<p><a href="#content" style="font-size:-2; color:#FFF;">Select to skip to add the picture</a></p>
     
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="navbar-inner" role="inner_navigation">
@@ -81,8 +82,9 @@
 		</div>
         </map>
         
+        <!--role links to aid user in navigation-->
 		<div class="span9 top-margin" role="main_content">
-        <a name="content"></a>
+        <a name="content" id="content"></a>
 			<div class="span9 ">
 				<p class="text-center"><strong>PICTURE</strong></p>
 				<a href="albumIN.html">Album: Summer 2012</a>

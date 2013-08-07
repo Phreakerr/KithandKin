@@ -16,6 +16,9 @@
 </head>
 <body>
 	<!-- Header  -->
+    <!--skip to content link only 'visible' to screen reader-->
+	<p><a href="#content" style="font-size:-2; color:#FFF;">Select to skip to the search form</a></p>
+    
 	<div class="navbar navbar-inverse navbar-fixed-top"role="navigation">
 		<div class="navbar-inner" role="inner_navigation">
 			<div class="container" role="navigation_items">
@@ -78,7 +81,7 @@
 		</div>
         </map>
 		<div class="span9 top-margin" role="main_content">
-			<a name="content"></a>
+			<a name="content" id="content"></a>
 				<div class="span8">
 					<form class="input span6 pull-right" method="post" action="#">
 						<legend class="text-center">Add New Contact</legend>

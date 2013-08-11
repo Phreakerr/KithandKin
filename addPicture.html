@@ -12,11 +12,14 @@
 	media="screen">
 <link href="css/line.css" rel="stylesheet" media="screen">
 <link href="img/favicon.png" rel="icon" type="image/png">
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 	<!-- Content -->
-    <!--allows user to jump to main content-->
-    <p><a href="#content">skip to content</a></p>
+     <!--skip to content link only 'visible' to screen reader-->
+	<p><a href="#content" style="font-size:-2; color:#FFF;">Select to skip to the search results</a></p>
+    
 	<div class="container span5 offset3" role="content_container">
     <a name="content"></a>
 		<form class="form-horizontal span4" role="add_picture_form">
@@ -42,7 +45,6 @@
 				</div>
 			</form>
 	</div>
-	<script src="http://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>

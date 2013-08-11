@@ -12,11 +12,11 @@
 	media="screen">
 <link href="css/line.css" rel="stylesheet" media="screen">
 <link href="img/favicon.png" rel="icon" type="image/png">
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 	<!-- Content -->
-    <!--allows user to jump to main content-->
-    <p><a href="#content">skip to content</a></p>
 	<div class="container span5 offset3" role="content_container">
     <a name="content"></a>
 		<form class="form-horizontal span4" role="add_album_form">
@@ -50,9 +50,15 @@
 						<button type="submit" onClick="parent.location='home.html'" class="btn btn-large btn-primary">Add Album</button>
 					</div>
 				</div>
-			</form>
+			   <a href="#content" id="backToTopLink" style="text-align:center;display:none;" alt="Return to the top of page">Back to top</a>
+					</form>
+               <!--link to top of the page for easier navigation only displayed when the screen size is too small-->
+			   <script>
+                   if ($(document).height() > $(window).height()) 
+                    {
+                         $("#backToTopLink").css('display','block');
+                    }
+                </script>
 	</div>
-	<script src="http://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

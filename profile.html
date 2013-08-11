@@ -161,7 +161,15 @@
 									<button type="submit" class="btn btn-large btn-primary">Update</button>
 								</div>
 							</div>
-						</form>
+						   <a href="#content" id="backToTopLink" style="text-align:center;display:none;" alt="Return to the top of page">Back to top</a>
+					</form>
+               <!--link to top of the page for easier navigation only displayed when the screen size is too small-->
+			   <script>
+                   if ($(document).height() > $(window).height()) 
+                    {
+                         $("#backToTopLink").css('display','block');
+                    }
+                </script>
 					</div>
 				</div>
 			</div>

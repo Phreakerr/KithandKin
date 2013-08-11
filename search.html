@@ -13,6 +13,10 @@
 	media="screen">
 <link href="css/line.css" rel="stylesheet" media="screen">
 <link href="img/favicon.png" rel="icon" type="image/png">
+
+<!-- JS Files -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 	<!-- Header  -->
@@ -95,13 +99,18 @@
 								By Name
 							</label>
 						</div>
+					   <a href="#content" id="backToTopLink" style="text-align:center;display:none;" alt="Return to the top of page">Back to top</a>
 					</form>
+               <!--link to top of the page for easier navigation only displayed when the screen size is too small-->
+			   <script>
+                   if ($(document).height() > $(window).height()) 
+                    {
+                         $("#backToTopLink").css('display','block');
+                    }
+                </script>
 				</div>
 		</div>
 	</div>
 	<!-- end Content-->
-	<!-- JS Files -->
-	<script src="http://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

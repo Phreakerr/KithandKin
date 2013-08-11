@@ -12,6 +12,9 @@
 	media="screen">
 <link href="css/line.css" rel="stylesheet" media="screen">
 <link href="img/favicon.png" rel="icon" type="image/png">
+<!-- JS Files -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 	<!-- Header  -->
@@ -82,7 +85,7 @@
 		<div class="span9 top-margin" role="main_content">
 			<a name="content" id="content"></a>
 				<div class="span8">
-					<form class="input span7 pull-right" method="post" action="#" role="frequently_asked_questions">
+					<form class="input span7 pull-right" method="post" action="#" role="search_contacts">
 						<legend class="text-center">Search Contacts</legend>
 						<div class="span7">
 						<div class="span1"> 
@@ -100,13 +103,18 @@
 
 
 						
+					   <a href="#content" id="backToTopLink" style="text-align:center;display:none;" alt="Return to the top of page">Back to top</a>
 					</form>
+               <!--link to top of the page for easier navigation only displayed when the screen size is too small-->
+			   <script>
+                   if ($(document).height() > $(window).height()) 
+                    {
+                         $("#backToTopLink").css('display','block');
+                    }
+                </script>
 				</div>
 		</div>
 	</div>
 	<!-- end Content-->
-	<!-- JS Files -->
-	<script src="http://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

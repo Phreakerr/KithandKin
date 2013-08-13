@@ -1,0 +1,11 @@
+.control-group
+{
+	margin:auto;
+	width:497px;
+	display:block;
+}
+
+circle
+{
+	cursor: pointer;	
+}

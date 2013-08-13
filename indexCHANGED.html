@@ -5,8 +5,9 @@
 <head>
 <title>Kith & Kin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="raphael-min.js"></script>
-		<script src="jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="raphael-min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		<link href="css/layout.css" rel="stylesheet" media="screen">
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
@@ -15,10 +16,23 @@
 		<link href="css/colorbox.css" rel="stylesheet" media="screen">
 		<link href="img/favicon.png" rel="icon" type="image/png">
 <script type="text/javascript">
-var circle1x=850,circle1y=280,circle1r=250,circle2x=550,circle2y=280,circle2r=250,overlap=calculateOverlap(circle1x,circle1y,circle1r,circle2x,circle2y,circle2r),circle1coords,circle2coords,overlapOrigin,overlapPoints=[],circle1Points=[],circle2Points=[],disableDrag=!1;
-window.onload=function(){setOrigin();var a=Raphael("holder",$('.container').width()-20,$(document).height()-70);circle1=a.circle(circle1x,circle1y,circle1r).attr({fill:"#000","fill-opacity":0,"stroke-width":5,stroke:"#000"});circle2=a.circle(circle2x,circle2y,circle2r).attr({fill:"#000","fill-opacity":0,"stroke-width":5,stroke:"#000"});int0=a.circle(overlap[0],overlap[1],7).attr({fill:"#C00","fill-opacity":0,"stroke-width":0,stroke:"#000"});int1=a.circle(overlap[2],overlap[3],7).attr({fill:"#0C0","fill-opacity":0,
-"stroke-width":0,stroke:"#000"});side0=a.circle(overlap[4],overlap[5],7).attr({fill:"#00C","fill-opacity":0,"stroke-width":0,stroke:"#000"});side1=a.circle(overlap[6],overlap[7],7).attr({fill:"#CC0","fill-opacity":0,"stroke-width":0,stroke:"#000"});overlapPath=a.path("M"+overlap[0]+" "+overlap[1]+" L"+overlap[4]+" "+overlap[5]+" L"+overlap[2]+" "+overlap[3]+" L"+overlap[6]+" "+overlap[7]+" Z").attr({fill:"#000","fill-opacity":0,"stroke-width":0,stroke:"#000"});originCircle=a.circle(overlapOrigin[0],
-overlapOrigin[1],7).attr({fill:"#C0C","fill-opacity":0,"stroke-width":0,stroke:"#000"});friendsText=a.text(circle1x,circle1y+(circle1r+30),"Baratheon").attr({fill:"#000","fill-opacity":1,"font-size":16});familyText=a.text(circle2x,circle2y+(circle2r+30),"Lannister").attr({fill:"#000","fill-opacity":1,"font-size":16});overlapCircles=[];overlapLabels=[];circle1Circles=[];circle1Labels=[];circle2Circles=[];circle2Labels=[];overlapPoints.push([0.6,0.1]);overlapPoints.push([-0.13,0.49]);overlapPoints.push([0.3,
+
+window.onload=function(){
+	setOrigin();
+	var a=Raphael("holder",$('.span9').width()-20,$('.span9').width()-70);
+	circle1x=($('.span9').width()/1.6),circle1y=($('.span9').width()/3.4)+10),circle1r=($('.span9').width()/3.4),circle2x=($('.span9').width()/2.75),circle2y=(($('.span9').width()/3.4)+10),circle2r=($('.span9').width()/3.4),overlap=calculateOverlap(circle1x,circle1y,circle1r,circle2x,circle2y,circle2r),circle1coords,circle2coords,overlapOrigin,overlapPoints=[],circle1Points=[],circle2Points=[],disableDrag=!1;
+	circle1=a.circle(circle1x,circle1y,circle1r).attr({fill:"#000","fill-opacity":0,"stroke-width":5,stroke:"#000"});
+	circle2=a.circle(circle2x,circle2y,circle2r).attr({fill:"#000","fill-opacity":0,"stroke-width":5,stroke:"#000"});
+	int0=a.circle(overlap[0],overlap[1],7).attr({fill:"#C00","fill-opacity":0,"stroke-width":0,stroke:"#000"});
+	int1=a.circle(overlap[2],overlap[3],7).attr({fill:"#0C0","fill-opacity":0,"stroke-width":0,stroke:"#000"});
+	side0=a.circle(overlap[4],overlap[5],7).attr({fill:"#00C","fill-opacity":0,"stroke-width":0,stroke:"#000"});
+	side1=a.circle(overlap[6],overlap[7],7).attr({fill:"#CC0","fill-opacity":0,"stroke-width":0,stroke:"#000"});
+	overlapPath=a.path("M"+overlap[0]+" "+overlap[1]+" L"+overlap[4]+" "+overlap[5]+" L"+overlap[2]+" "+overlap[3]+" L"+overlap[6]+" "+overlap[7]+" Z").attr({fill:"#000","fill-opacity":0,"stroke-width":0,stroke:"#000"});originCircle=a.circle(overlapOrigin[0],
+overlapOrigin[1],7).attr({fill:"#C0C","fill-opacity":0,"stroke-width":0,stroke:"#000"});
+	friendsText=a.text(circle1x,circle1y+(circle1r+30),"Baratheon").attr({fill:"#000","fill-opacity":1,"font-size":16});
+	familyText=a.text(circle2x,circle2y+(circle2r+30),"Lannister").attr({fill:"#000","fill-opacity":1,"font-size":16});
+	overlapCircles=[];overlapLabels=[];circle1Circles=[];circle1Labels=[];circle2Circles=[];circle2Labels=[];
+	overlapPoints.push([0.6,0.1]);overlapPoints.push([-0.13,0.49]);overlapPoints.push([0.3,
 -0.6]);overlapCircles.push(a.circle(0,0,10).attr({fill:"#C00","fill-opacity":1,"stroke-width":2,stroke:"#000"}));overlapCircles.push(a.circle(0,0,10).attr({fill:"#00C","fill-opacity":1,"stroke-width":2,stroke:"#000"}));overlapCircles.push(a.circle(0,0,10).attr({fill:"#0C0","fill-opacity":1,"stroke-width":2,stroke:"#000"}));overlapLabels.push(a.text(overlapPoints[0][0],overlapPoints[0][1]+20,"Joffrey").attr({fill:"#000","fill-opacity":1,"font-size":14}));overlapLabels.push(a.text(overlapPoints[1][0],
 overlapPoints[1][1]+20,"Robert").attr({fill:"#000","fill-opacity":1,"font-size":14}));overlapLabels.push(a.text(overlapPoints[2][0],overlapPoints[2][1]+20,"Cersei").attr({fill:"#000","fill-opacity":1,"font-size":14}));circle1Points.push([0.3,0]);circle1Points.push([0.5,0]);circle1Points.push([0.8,0]);circle1Circles.push(a.circle(0,0,10).attr({fill:"#C00","fill-opacity":1,"stroke-width":2,stroke:"#000"}));circle1Circles.push(a.circle(0,0,10).attr({fill:"#00C","fill-opacity":1,"stroke-width":2,stroke:"#000"}));
 circle1Circles.push(a.circle(0,0,10).attr({fill:"#0C0","fill-opacity":1,"stroke-width":2,stroke:"#000"}));circle1Labels.push(a.text(overlapPoints[0][0],overlapPoints[0][1]+20,"Tywin").attr({fill:"#000","fill-opacity":1,"font-size":14}));circle1Labels.push(a.text(overlapPoints[1][0],overlapPoints[1][1]+20,"Jaime").attr({fill:"#000","fill-opacity":1,"font-size":14}));circle1Labels.push(a.text(overlapPoints[2][0],overlapPoints[2][1]+20,"Tyrion").attr({fill:"#000","fill-opacity":1,"font-size":14}));circle2Points.push([0.3,
@@ -50,7 +64,7 @@ function intersection(a,d,b,c,e,f){var g;c-=a;g=e-d;e=Math.sqrt(g*g+c*c);if(e>b+
 	<!-- Header  -->
     
     <!--allows user to jump to main content-->
-    <p><a href="#content">skip to content</a></p>
+    <a href="#content">skip to content</a>
     
     <map title="Navigation Bar" id="navbar">
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -91,10 +105,10 @@ function intersection(a,d,b,c,e,f){var g;c-=a;g=e-d;e=Math.sqrt(g*g+c*c);if(e>b+
     </map>
 	<!-- end Header -->
 	<!-- Content -->
-	<div class="container" role="content_container">
+	<div class="container top-margin" role="content_container">
 		<map title="Profile Bar" id="profileBar">
-			<div class="span2">
-			<div class="sidebar-nav affix span2">
+			<div class="span2 profile">
+			<div class="sidebar-nav span2">
 				<img src="./img/accountPic.png" id="img" class="img-polaroid" alt="Profile Picture">
 
 				<ul class="nav">
@@ -107,18 +121,16 @@ function intersection(a,d,b,c,e,f){var g;c-=a;g=e-d;e=Math.sqrt(g*g+c*c);if(e>b+
 			</div>
 			<!--/.well -->
 			<span class="clear-sides"><br/></span>
-		</div>
+			</div>
         </map>
         
 
 		<a name="content"></a>
-		<div id="holder" role="main_content">
+		<div id="holder" class="span9" role="main_content">
 		</div>
 	</div>
 
 	<!-- end Content-->
-	<!-- JS Files -->
-	<script src="http://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	
 </body>
 </html>

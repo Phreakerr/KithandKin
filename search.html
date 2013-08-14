@@ -34,10 +34,10 @@
 				<a class="brand" href="index.html"><img src="./img/LOGO2.png" class="logo" alt="Logo"> Kith & Kin</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li><a href="home.html"><em class="icon-user icon-white"></em> MY PROFILE</a></li>
-						<li><a href="searchContacts.html"><em class="icon-search icon-white"></em> SEARCH CONTACTS</a></li>
-						<li class="active"><a href="search.html"><em class="icon-plus-sign icon-white"></em> ADD NEW CONTACT</a></li>
-						<li><a href="faq.html"><em class="icon-question-sign icon-white"></em> FAQ</a></li>
+						<li><a href="home.html"alt="Home"><em class="icon-user icon-white"></em> MY PROFILE</a></li>
+						<li><a href="searchContacts.html" alt="Search Contact"><em class="icon-search icon-white"></em> SEARCH CONTACTS</a></li>
+						<li class="active"><a href="search.html" alt="Add New Contact"><em class="icon-plus-sign icon-white"></em> ADD NEW CONTACT</a></li>
+						<li><a href="faq.html" alt="FAQ"><em class="icon-question-sign icon-white"></em> FAQ</a></li>
 					</ul>
 				</div>
 				<div class="btn-group  pull-right">
@@ -45,13 +45,13 @@
 					<a class="btn btn-info dropdown-toggle" data-toggle="dropdown"
 						href="#"><span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="profile.html"><i class="icon-pencil"></i> Edit</a></li>
-						<li><a href="home.html"><i class="icon-book"></i> Albums</a></li>
-						<li><a href="addPicture.html"><i class="icon-picture"></i> Add Picture</a></li>
-						<li><a href="searchContacts.html"><i class="icon-search"></i> Search Contacts</a></li>
-						<li><a href="search.html"><i class="icon-plus-sign"></i> Add Contact</a></li>
+						<li><a href="profile.html" alt="Edit profile"><i class="icon-pencil"></i> Edit</a></li>
+						<li><a href="home.html" alt="Albums"><i class="icon-book"></i> Albums</a></li>
+						<li><a href="addPicture.html" alt="Add Picture"><i class="icon-picture"></i> Add Picture</a></li>
+						<li><a href="searchContacts.html" alt="Search Contacts"><i class="icon-search"></i> Search Contacts</a></li>
+						<li><a href="search.html" alt="Search Contact"><i class="icon-plus-sign"></i> Add Contact</a></li>
 						<li class="divider"></li>
-						<li><a href="login.html"><i class="icon-off"></i> Logout</a></li>
+						<li><a href="login.html" alt="Logout"><i class="icon-off"></i> Logout</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
@@ -76,7 +76,7 @@
 				</ul>
 				<div class="control-group">
 					<div class="controls center">
-						<button type="submit" onClick="parent.location='profile.html'" class="btn btn-large btn-primary">Edit Profile</button>
+						<button type="submit" onClick="parent.location='profile.html'" class="btn btn-large btn-primary" alt="Edit Profile">Edit Profile</button>
 					</div>
 				</div>
 			</div>
@@ -88,14 +88,14 @@
 			<a name="content" id="content"></a>
 				<div class="span8">
 					<form class="input span6 pull-right" method="post" action="#">
-						<legend class="text-center">Add New Contact</legend>
+						<h1><legend class="text-center">Add New Contact</legend></h1>
 						<input class="input-large" id="appendedInputButtons" type="text" placeholder="Search"  name="searchTerm">
-						<button class="btn btn-primary" type="submit">Search</button>
+						<button class="btn btn-primary" type="submit" alt="Search Contact">Search</button>
 						<div class="span2 pull-right">
-							<label class="checkbox controls"> <input type="checkbox" name="byUsername" checked>
+							<label class="checkbox controls"> <input type="checkbox" name="byUsername" checked alt="Search by username">
 								By Email
 							</label>
-							<label class="checkbox controls"> <input type="checkbox" name="byName">
+							<label class="checkbox controls"> <input type="checkbox" name="byName" alt="Search by name">
 								By Name
 							</label>
 						</div>

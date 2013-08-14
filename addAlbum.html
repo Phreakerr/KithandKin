@@ -21,20 +21,20 @@
 	<div class="container span5 offset3" role="content_container">
     <a name="content"></a>
 		<form class="form-horizontal span4" style="width:100%;" role="add_album_form">
-				<legend class="text-center">Add Album</legend>
+				<h1><legend class="text-center">Add Album</legend></h1>
 				<div class="control-group">
 					<label class="control-label" for="inputAlbumName">Album
 						Name:</label>
 					<div class="controls">
 						<input type="text" id="album_name" name="album_name"
-							placeholder="Album Name">
+							placeholder="Album Name" alt="Album Name">
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label" for="Country">Share with:</label>
+					<label class="control-label" for="Country" alt="Share with selection">Share with:</label>
 					<div class="controls">
 						<select name="country">
-							<option value="0">Nobody</option>
+							<option value="0" >Nobody</option>
 							<option value="1">Cersei Lannister</option>
 							<option value="2">Jaime Lannister</option>
 							<option value="3">Joffrey Baratheon</option>
@@ -48,7 +48,7 @@
 				</div>
 				<div class="control-group">
 					<div class="controls">
-						<button type="submit" onClick="parent.location='home.html'" class="btn btn-large btn-primary">Add Album</button>
+						<button type="submit" onClick="parent.location='home.html'" class="btn btn-large btn-primary" alt="Add Album">Add Album</button>
 					</div>
 				</div>
                 </form>

@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"> 
+<xhtml:lang = "en">
+<head runat="server">
+    <title>Kith & Kin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link href="Styles/bootstrap.css" rel="stylesheet" media="screen" type="text/css" />
+    <link href="Styles/bootstrap-responsive.css" rel="stylesheet" media="screen" type="text/css" />
+    <link href="Styles/line.css" rel="stylesheet" media="screen" type="text/css" />
+    <link href="Styles/layout.css" rel="stylesheet" media="screen" type="text/css" />
+    <link href="Images/favicon.png" rel="icon" type="image/x-icon" />
+    <!-- JS Files -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js" ></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <a href="#content" style="font-size: -2; color: #FFF;">skip to content</a>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-inner" role="inner_navigation">
+            <div class="container" role="navigation_items">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"
+                    runat="server">
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
+                    </span>
+                </button>
+                <a class="brand" id="logo" href="Home.aspx">
+                    <img src="Images/LOGO2.png" class="logo" alt="Logo" />
+                    Kith & Kin</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <% if (Page.Request.Path.Contains("Home.aspx"))
+                           { %>
+                        <li class="active">
+                            <% }
+                           else
+                           { %><li>
+                                <% } %>
+                                <a href="ProfileHome.aspx" alt="Profile Home"><em class="icon-user icon-white"></em> MY PROFILE</a></li>
+                            <% if (Page.Request.Path.Contains("SearchContacts.aspx"))
+                               { %>
+                            <li class="active">
+                                <% }
+                               else
+                               { %><li>
+                                    <% } %>
+                                    <a href="SearchContacts.aspx" alt="Search for contact"><em class="icon-search icon-white">
+                                    </em> SEARCH CONTACTS</a></li>
+                                <% if (Page.Request.Path.Contains("AddContact.aspx"))
+                                   { %>
+                                <li class="active">
+                                    <% }
+                                   else
+                                   { %><li>
+                                        <% } %>
+                                        <a href="AddContact.aspx" alt="Add New Contact"><em class="icon-plus-sign icon-white">
+                                        </em> ADD NEW CONTACT</a></li>
+                                    <% if (Page.Request.Path.Contains("Faq.aspx"))
+                                       { %>
+                                    <li class="active">
+                                        <% }
+                                       else
+                                       { %><li>
+                                            <% } %>
+                                            <a href="Faq.aspx" alt="FAQ"><em class="icon-question-sign icon-white"></em> FAQ</a></li>
+                    </ul>
+                </div>
+                  <% if (Session["button"]!=null && Convert.ToInt32(Session["button"]) == 1)
+                     { %>
+                <div class="btn-group pull-right">
+                    <a class="btn btn-info" href="Home.aspx"><em class="icon-user icon-white"></em>
+                        <% Session["loginName"].ToString(); %>
+                    </a><a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#"><span
+                        class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="EditProfile.aspx" alt="Edit profile"><em class="icon-pencil"></em>Edit</a></li>
+                        <li><a href="ProfileHome.aspx" alt="Albums"><em class="icon-book"></em>Albums</a></li>
+                        <li><a href="AddPicture.aspx" alt="Add Picture"><em class="icon-picture"></em>Add Picture</a></li>
+                        <li><a href="SearchContacts.aspx" alt="Search Contacts"><em class="icon-search"></em>
+                            Search Contacts</a></li>
+                        <li><a href="AddContact.aspx" alt="Search Contact"><em class="icon-plus-sign"></em>Add
+                            Contact</a></li>
+                        <li class="divider"></li>
+                        <li><a href="Logon.aspx" onclick="Logout_Click" alt="Logout"><em class="icon-off"></em>
+                            Logout</a></li>
+                    </ul>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" >
+        
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

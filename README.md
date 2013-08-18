@@ -1,4 +1,0 @@
-KithandKin
-==========
-
-HCI Module prototype
